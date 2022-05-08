@@ -1,4 +1,4 @@
-# Diagnostics project
+# Diagnostics project for the totally human team
 
 Scripts go in the `scripts` directory.
 
