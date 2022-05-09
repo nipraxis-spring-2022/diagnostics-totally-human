@@ -21,11 +21,6 @@ EXAMPLE_FILENAME = 'ds107_sub012_t1r2_small.nii'
 # Hint: see the solutions if you are stuck.
 # +++your code here+++
 
-CODE_DIR = op.join(MY_DIR,'..')
-sys.path.append(CODE_DIR)       
-
-print(sys.path)
-
 import numpy as np
 
 import nibabel as nib
@@ -38,7 +33,6 @@ from spm_funcs import get_spm_globals, spm_global
 def test_spm_globals():
     # Test get_spm_globals and spm_global functions
     example_path = op.join(MY_DIR, EXAMPLE_FILENAME)
-
     expected_values = np.loadtxt(op.join(MY_DIR, 'global_signals.txt'))
     glob_vals = get_spm_globals(example_path)
     assert glob_vals is not None, 'Did you forget to return the values?'

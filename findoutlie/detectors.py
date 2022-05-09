@@ -11,9 +11,6 @@ requirements are met and raise an error otherwise.
 """
 
 # Any imports you need
-import numpy as np
-
-
 # +++your code here+++
 
 
@@ -54,14 +51,3 @@ def iqr_detector(measures, iqr_proportion=1.5):
     # * You'll likely need np.logical_or
     # https://textbook.nipraxis.org/numpy_logical.html
     # +++your code here+++
-
-    q25 = np.percentile(measures, 25)
-    q50 = np.percentile(measures, 50)
-    q75 = np.percentile(measures, 75)
-
-    IQR = q75 - q25
-    HiLim = q75 + IQR * iqr_proportion
-    Lolim = q25 - IQR * iqr_proportion
-    outlier_tf = np.logical_or(measures > HiLim, measures < Lolim)
-    return outlier_tf
-

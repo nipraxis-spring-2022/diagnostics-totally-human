@@ -11,7 +11,6 @@ or better, in IPython::
 
 import os.path as op
 import sys
-import numpy as np
 
 MY_DIR = op.dirname(__file__)
 
@@ -20,8 +19,8 @@ MY_DIR = op.dirname(__file__)
 # Hint: sys.path
 # Hint: see the solutions if you are stuck.
 # +++your code here+++
-CODE_DIR = op.join(MY_DIR,'..')
-sys.path.append(CODE_DIR)
+
+import numpy as np
 
 # This import needs the directory containing the findoutlie directory
 # on the Python path.
