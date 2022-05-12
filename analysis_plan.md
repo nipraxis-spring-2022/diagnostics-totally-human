@@ -4,9 +4,9 @@ This is the suggested analysis plan foe the outlier detection
 
 ## Reading we need to do
 
-Look at Nipy's diagnostics (put link in ther)
-Reviwe Principal Component Analysis (Where)
-Review FSL's ICA method
+* Look at Nipy's diagnostics (put link in ther)
+* Reviwe Principal Component Analysis (Where)
+* Review FSL's ICA method
 
 ## Action plan
 
