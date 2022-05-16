@@ -1,7 +1,7 @@
 """ Scan outlier metrics
 """
 
-#+ Your imports here.
+import numpy as np
 
 
 def dvars(img):
@@ -21,11 +21,12 @@ def dvars(img):
         One-dimensional array with n-1 elements, where n is the number of
         volumnes in `img`.
     """
-    # Hint: remember 'axis='.  For example:
-    # In [2]: arr = np.array([[2, 3, 4], [5, 6, 7]])
-    # In [3]: np.mean(arr, axis=1)
-    # Out[2]: array([3., 6.])
-    #
-    # You may be be able to solve this in four lines, without a loop.
-    # But solve it any way you can.
-    return [42]
+    data = img.get_fdata()
+    n_trs = data.shape[-1]
+    n_voxels = np.prod(data.shape[:-1])
+
+    data_reshaped = np.reshape(data, (n_voxels, n_trs))
+    diff = np.diff(a = data_reshaped, n = 1, axis=1)
+    dvals = np.sqrt(np.sum(diff ** 2, axis=0) / n_voxels)
+
+    return dvals
