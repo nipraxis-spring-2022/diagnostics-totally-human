@@ -26,7 +26,7 @@ def dvars(img):
     n_voxels = np.prod(data.shape[:-1])
 
     data_reshaped = np.reshape(data, (n_voxels, n_trs))
-    diff = np.diff(a = data_reshaped, n = 1, axis=1)
-    dvals = np.sqrt(np.sum(diff ** 2, axis=0) / n_voxels)
+    diff = np.diff(a = data_reshaped, n = 1, axis = 1)
+    dvals = np.sqrt(np.sum(diff ** 2, axis = 0) / n_voxels)
 
     return dvals
